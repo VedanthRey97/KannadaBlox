@@ -1,0 +1,6 @@
+{
+  "name": "KannadaBLOX",
+  "description": "Roblox-inspired 3D Kannada alphabet learning adventure with 3D Boss Raid car racing, mystery doors, tactile tracing from ಅ to ಳ, and authentic native pronunciations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

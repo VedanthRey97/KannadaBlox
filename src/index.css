@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    background-color: #FDFBF7;
+    color: #111827;
+  }
+
+  .font-pop {
+    font-family: 'Paytone One', 'Rubik', sans-serif;
+  }
+
+  .font-display {
+    font-family: 'Rubik', 'Fredoka', sans-serif;
+    font-weight: 800;
+  }
+
+  .font-comic {
+    font-family: 'Fredoka', 'Paytone One', sans-serif;
+    font-weight: 700;
+  }
+
+  .font-gaming {
+    font-family: 'Rubik', 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+  }
+
+  .font-kannada {
+    font-family: 'Baloo Tamma 2', 'Noto Sans Kannada', 'Noto Serif Kannada', 'Anek Kannada', 'Kannada Sangam MN', 'Kannada MN', 'Nirmala UI', sans-serif !important;
+    font-weight: 700;
+  }
+
+  /* Backward compatibility for pixel classes so existing components don't break during migration */
+  .font-pixel {
+    font-family: 'Paytone One', sans-serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* =========================================================
+   HIGH-CONTRAST POP ILLUSTRATION & STICKER STYLES (BEHANCE)
+   ========================================================= */
+
+/* Die-cut Vinyl Sticker Base */
+.pop-card {
+  background-color: #FFFFFF;
+  border: 3.5px solid #111827;
+  box-shadow: 4px 4px 0px #111827;
+  border-radius: 1.25rem;
+  position: relative;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pop-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 5px 5px 0px #111827;
+}
+
+/* Interactive Pop Button with Hard 3D Offset Shadow */
+.pop-btn {
+  border: 3px solid #111827;
+  box-shadow: 4px 4px 0px #111827;
+  border-radius: 0.85rem;
+  font-family: 'Paytone One', sans-serif;
+  transition: transform 0.08s ease, box-shadow 0.08s ease, filter 0.1s ease;
+  user-select: none;
+}
+
+.pop-btn:hover {
+  filter: brightness(1.05);
+}
+
+.pop-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0px #111827;
+}
+
+/* Backward-compatible class */
+.pixel-btn {
+  border: 3px solid #111827;
+  box-shadow: 4px 4px 0px #111827;
+  border-radius: 0.85rem;
+  font-family: 'Paytone One', sans-serif;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.pixel-btn:hover {
+  filter: brightness(1.05);
+}
+
+.pixel-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0px #111827;
+}
+
+.pixel-border {
+  border: 3.5px solid #111827;
+  box-shadow: 4px 4px 0px #111827;
+  border-radius: 1rem;
+}
+
+.pixel-border-gold {
+  border: 3.5px solid #111827;
+  box-shadow: 4px 4px 0px #111827;
+  border-radius: 1rem;
+}
+
+/* Die-cut Sticker Badge */
+.sticker-badge {
+  border: 2.5px solid #111827;
+  box-shadow: 3px 3px 0px #111827;
+  border-radius: 9999px;
+  font-family: 'Paytone One', sans-serif;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* Halftone Screen-Print Texture (Matching Ref 1: Cap & Shirt) */
+.halftone-dots {
+  background-image: radial-gradient(#111827 1.3px, transparent 1.3px);
+  background-size: 7px 7px;
+}
+
+.halftone-orange {
+  background-color: #FF5400;
+  background-image: radial-gradient(rgba(17, 24, 39, 0.25) 1.5px, transparent 1.5px);
+  background-size: 8px 8px;
+}
+
+.halftone-cream {
+  background-image: radial-gradient(rgba(17, 24, 39, 0.08) 1.2px, transparent 1.2px);
+  background-size: 8px 8px;
+}
+
+/* Comic Paper Canvas Texture */
+.paper-canvas {
+  background-color: #FAF6EE;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+/* Comic Starburst Explosive Background (Matching Ref 2 & 3) */
+.comic-burst {
+  background: radial-gradient(circle at center, #FFDE59 0%, #FF9100 60%, #E5192D 100%);
+}
+
+/* Hard Pop Shadow Utility */
+.pop-shadow {
+  box-shadow: 4px 4px 0px #111827;
+}
+
+.pop-shadow-lg {
+  box-shadow: 6px 6px 0px #111827;
+}
+
+/* Vinyl Die-Cut Sticker Effect (White ring + thick black shadow) */
+.die-cut-sticker {
+  filter: drop-shadow(0 0 0 #FFFFFF) drop-shadow(4px 4px 0 #111827);
+}
+
+@keyframes comicPop {
+  0% { transform: scale(0.9); opacity: 0; }
+  60% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-comic-pop {
+  animation: comicPop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes floatBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: floatBob 2.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+/* Explicit Kannada Typography: ensures loops & counters stay open and crisp */
+.font-kannada {
+  font-family: 'Baloo Tamma 2', 'Noto Sans Kannada', 'Noto Serif Kannada', 'Anek Kannada', 'Kannada Sangam MN', 'Kannada MN', 'Nirmala UI', sans-serif !important;
+}
